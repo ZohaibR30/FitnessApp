@@ -1,4 +1,4 @@
-# signupp
+# FitnessApp
 
 A new Flutter project.
 
