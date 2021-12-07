@@ -38,13 +38,13 @@ class MyApp extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(top: 10,left: 40,right:30, bottom:0),
                   child: Text(
-                      "In order to protect your account, make sure your password "
-                          "is longer than 7 characters",
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF001D4B),
-                  fontSize: 15,
-                ),
+                    "In order to protect your account, make sure your password "
+                        "is longer than 7 characters",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF001D4B),
+                      fontSize: 15,
+                    ),
                   ),
 
                 ),
@@ -101,3 +101,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
