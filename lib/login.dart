@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+import './signup.dart';
+import './home.dart';
+import './recover_pass.dart';
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
+    return  MaterialApp(
+        home: Builder(
+          builder: (ctx) => Scaffold(
+            appBar: AppBar(
           backgroundColor:  const Color(0xFF001D4B),
 //          title: const Center(child: Text('Login Page')),
         ),
         backgroundColor: Colors.white,
-        body: SingleChildScrollView(
+          body: SingleChildScrollView(
           child: Column(
             children: [
               const Padding(
@@ -64,7 +63,9 @@ class MyApp extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 30.0),
                 child: MaterialButton(onPressed: () {
-
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => const MyApp()),
+                  );
                 },
                   height: 60,
                   minWidth: 250,
@@ -84,8 +85,12 @@ class MyApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  //what to do when pressed
-                  //
+                  Navigator.push(
+                    ctx, MaterialPageRoute(builder: (context) => const Recover()),
+                  );
+
+
+
                 },
                 child: const Text('Forgot Password'),
                 style: TextButton.styleFrom(
@@ -96,7 +101,12 @@ class MyApp extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(60.0),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      ctx, MaterialPageRoute(builder: (context) => const Signup()),
+                    );
+
+                  },
                   child: const Text("Don't Have an Account? Signup"),
                   style: TextButton.styleFrom(
                     primary: Colors.blue[900],
@@ -104,16 +114,14 @@ class MyApp extends StatelessWidget {
                       fontSize: 15,
                       color:  Color(0xFF001D4B),
                     ),
-                    padding: const EdgeInsets.only(top: 10),
-                  ),
+                    padding: const EdgeInsets.only(top: 10), ),
                 ),
               ),
             ],
           ),
-        ),
-      ),
+          ),
+          ),
+        )
     );
   }
 }
-
-
