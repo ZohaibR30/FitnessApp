@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+import './otp.dart';
+class Recover extends StatelessWidget {
+  const Recover({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,29 +50,34 @@ class MyApp extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 100,left:0 ,right: 250,bottom:10 ),
                 child: Text(
-                            "Email Address",
-                            style: TextStyle(
-                              color: Color(0xFF001D4B),
-                              fontWeight: FontWeight.w800,
-                              fontSize: 18,
-                            ),
-                          ),
+                  "Email Address",
+                  style: TextStyle(
+                    color: Color(0xFF001D4B),
+                    fontWeight: FontWeight.w800,
+                    fontSize: 18,
+                  ),
+                ),
               ),
               Container(
                 padding: const EdgeInsets.only(
                     top: 0, right: 10, left: 10, bottom: 10),
                 child: const TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      // prefixIcon: Icon(Icons.mail_outlined),
-                      ),
+                    border: OutlineInputBorder(),
+                    // prefixIcon: Icon(Icons.mail_outlined),
+                  ),
 
                 ),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(top: 80.0),
-                child: MaterialButton(onPressed: () {  },
+                child: MaterialButton(onPressed: () {
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => const Otp()),
+                  );
+
+                },
                   height: 60,
                   minWidth: 250,
                   color: const Color(0xFF001D4B),
