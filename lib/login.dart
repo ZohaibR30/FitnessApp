@@ -111,7 +111,7 @@ class Login extends StatelessWidget {
 //          title: const Center(child: Text('Login Page')),
         ),
         backgroundColor: Colors.white,
-        body: SingleChildScrollView(
+          body: SingleChildScrollView(
           child: Column(
             children: [
               const Padding(
@@ -209,8 +209,7 @@ class Login extends StatelessWidget {
                       fontSize: 15,
                       color: Color(0xFF001D4B),
                     ),
-                    padding: const EdgeInsets.only(top: 10),
-                  ),
+                    padding: const EdgeInsets.only(top: 10), ),
                 ),
               ),
             ],
