@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+// import './recover_pass.dart';
+class Otp extends StatelessWidget {
+  const Otp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +30,7 @@ class MyApp extends StatelessWidget {
               const SizedBox(
                 height: 60,
               ),
-              Text(
+              const Text(
                 "Enter 4 Digit Code",
                 style: TextStyle(
                   fontSize: 17,
@@ -48,38 +45,39 @@ class MyApp extends StatelessWidget {
                 ),
                 child: TextFormField(
                   keyboardType: TextInputType.number,
-                style:
-                const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color(0xFF001D4B),
-                    ),
-                    borderRadius: BorderRadius.circular(10),
+                  style:
+                  const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color(0xFF001D4B),
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                        color: Color(0xFF001D4B),
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                        color: Color(0xFF001D4B),
+
+                      ),
+                      borderRadius: BorderRadius.circular(10),
 
                     ),
-                    borderRadius: BorderRadius.circular(10),
+                    prefix: const Padding(padding: EdgeInsets.symmetric(horizontal: 5),
 
-                  ),
-                prefix: const Padding(padding: EdgeInsets.symmetric(horizontal: 5),
-
-                  ),),
+                    ),),
 
                 ),
 
-                ),
+              ),
 
 
               Padding(
                 padding: const EdgeInsets.only(top: 30.0),
                 child: MaterialButton(onPressed: () {
+
 
                 },
                   height: 60,
@@ -106,5 +104,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
